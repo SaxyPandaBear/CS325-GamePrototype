@@ -1,6 +1,2 @@
 //player 'object'
-
-//has its own update function for maneuverability
-function update () {
-    
-}
+myGame.Player = function(game) {};

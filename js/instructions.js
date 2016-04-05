@@ -1,7 +1,8 @@
 //instructions state of the game
 //note: can be accessed at any time
+myGame.Instructions = function(game) {};
 
-var instructionsState = {
+myGame.Instructions.prototype = {
     
     create: function () {
         
@@ -16,5 +17,5 @@ var instructionsState = {
         //defines the story of the game
         var storyLabel = game.add.text();
         var storyText = game.add.text();
-    };
+    }
 };
