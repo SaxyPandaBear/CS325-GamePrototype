@@ -8,7 +8,7 @@ var myGame = function () {
     Phaser.State.call(this);
 };
 
-myGame.prototype = Object.create(Phaser.State);
+myGame.prototype = Object.call(Phaser.State);
 myGame.prototype.constructor = myGame;
 
 myGame.prototype.create = function() {
@@ -22,7 +22,8 @@ game.state.add('Boot', new BootState());
 game.state.add('Menu', new MenuState());
 game.state.add('Instructions', new InstructionsState());
 game.state.add('Play', new PlayState());
+game.state.add('End', new EndState());
 
 //start with the boot state
-//start(key, keepCache, keepWorld, paramsForState) -> using params requires the init() function in the next state
+//start(key, keepCache, keepWorld, paramsForState...) -> using params requires the init() function in the next state
 game.state.start('Boot', true, false);
