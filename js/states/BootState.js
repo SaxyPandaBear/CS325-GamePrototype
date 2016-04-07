@@ -1,5 +1,6 @@
 //boot state of the game
 //encapsulates the actual initialization of the game, as well as preloading all of the assets required for the game to load
+//note: might not actually preload here - not necessary for this prototype, or in general really
 
 //bootState called from game
 var BootState = function () {
