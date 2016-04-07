@@ -59,6 +59,12 @@ PlayState.prototype.preload = function () {
 PlayState.prototype.create = function () {
     this.stage.backgroundColor = 0x444444
     
+    //EZGUI integration begins here
+    EZGUI.Theme.load(['assets/metalworks-theme/metalworks-theme.json'], null); //no function to do when its loaded
+    
+    
+    //Integration ends here
+    
     //inputs required
     this.qKey = game.input.keyboard.addKey(Phaser.Keyboard.Q); //add 'q'
     this.cursors = this.input.keyboard.createCursorKeys(); //arrow key input

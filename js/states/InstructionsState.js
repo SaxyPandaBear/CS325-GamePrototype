@@ -55,7 +55,7 @@ InstructionsState.prototype.create = function () {
     "to its former glory... Little do you know, a large\n" +
     "corporation has their eye on your newly inherited\n" +
     "property, and are due to seize it from you if the\n" +
-    "zoo continues to perform so poorly.",
+    "zoo continues to perform as poorly as it has.",
     {font: '12px Arial', fill: '#ffffff'});
     
     //expect an input of 'i', at which point return to the previous state
