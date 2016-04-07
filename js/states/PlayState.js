@@ -57,6 +57,9 @@ PlayState.prototype.preload = function () {
 };
 
 PlayState.prototype.create = function () {
+    this.stage.backgroundColor = 0x444444
+    
+    //inputs required
     this.qKey = game.input.keyboard.addKey(Phaser.Keyboard.Q); //add 'q'
     this.cursors = this.input.keyboard.createCursorKeys(); //arrow key input
     

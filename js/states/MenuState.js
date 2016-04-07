@@ -22,6 +22,7 @@ MenuState.prototype.preload = function () {
 }
 
 MenuState.prototype.create = function () {
+    this.stage.backgroundColor = 0x6666666
     //the game begins when the player clicks on the screen to start
     //in here, set background image, and include game title and instructions on how to play, and 
     //instructions that indicate that clicking the mouse starts the game.

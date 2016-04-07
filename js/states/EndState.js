@@ -11,9 +11,11 @@ EndState.prototype = Object.call(Phaser.State);
 EndState.prototype.constructor = EndState;
 
 EndState.prototype.create = function () {
+    this.stage.backgroundColor = 0x222222
+    
     //let the player know the game has ended.
     //note: readjust position once game is running
-    this.endText = game.add.text(game.world.centerX, game.world.centerY, "Game Over", {font: '32px Arial', fill: '#ffffff'});
+    this.endText = game.add.text(game.world.centerX, game.world.centerY - 60, "Game Over", {font: '32px Arial', fill: '#ffffff'});
     this.endText.anchor.setTo(0.5, 0.5);
     
     this.moreText = game.add.text(game.world.centerX, game.world.centerY + 100, "Click the screen to restart the game", {font: '20px Arial', fill: '#ffffff'});
