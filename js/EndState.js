@@ -5,7 +5,7 @@ var EndState = function () {
     
     //fields required for this state
     this.mouse = null;
-}
+};
 
 EndState.prototype = Object.call(Phaser.State);
 EndState.prototype.constructor = EndState;
@@ -30,4 +30,4 @@ EndState.prototype.update = function () {
     if (this.mouse.isDown){
         this.game.state.start('Boot', true, false);
     }
-}
+};

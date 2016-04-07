@@ -7,7 +7,7 @@ var InstructionsState = function () {
     this.prevMusic = null;
     this.iKey = null;
     this.qKey = null;
-}
+};
 
 InstructionsState.prototype = Object.call(Phaser.State);
 InstructionsState.prototype.constructor = InstructionsState;

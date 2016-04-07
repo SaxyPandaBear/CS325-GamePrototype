@@ -9,6 +9,7 @@ var PlayState = function () {
     this.player = null;
     this.endGame = false; //bool to let the game know to transition to end state
     this.qKey = null; //use to terminate the game
+    this.gKey = null; //use to access the GUIState - will comment out later
     this.cursors = null; //arrow keys
     this.uniqueID = 0;
     this.animalsCaptured = false;
@@ -16,6 +17,7 @@ var PlayState = function () {
     this.catCaptured = false;
     
 };
+
 PlayState.prototype = Object.call(Phaser.State);
 PlayState.prototype.constructor = PlayState;
 
@@ -60,13 +62,19 @@ PlayState.prototype.create = function () {
     this.stage.backgroundColor = 0x444444
     
     //EZGUI integration begins here
-    EZGUI.Theme.load(['assets/metalworks-theme/metalworks-theme.json'], null); //no function to do when its loaded
+    EZGUI.renderer = this.game.renderer;
+    /*
+    EZGUI.Theme.load(['assets/metalworks-theme/metalworks-theme.json'], function () {
+        //create gui
+        this.guiContainer = EZGUI.create()
+    }); 
     
-    
+    */
     //Integration ends here
     
     //inputs required
     this.qKey = game.input.keyboard.addKey(Phaser.Keyboard.Q); //add 'q'
+    this.gKey = game.input.keyboard.addKey(Phaser.Keyboard.G); //add 'g'
     this.cursors = this.input.keyboard.createCursorKeys(); //arrow key input
     
     //add the player sprite and define their attributes
@@ -208,10 +216,15 @@ PlayState.prototype.update = function () {
         this.endState = true;
     }
     
+    
     if (this.endState) {
         this.game.state.start('End', true, false);
     }
     
+    
+    if (this.gKey.isDown) {
+        this.game.state.start('GUI', true, false, this.player.inventory, this.player.tamedAnimals);
+    }
     
 };
 

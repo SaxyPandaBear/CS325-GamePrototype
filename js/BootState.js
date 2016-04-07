@@ -8,7 +8,7 @@ var BootState = function () {
     
     //variable fields
     //....
-}
+};
 
 BootState.prototype = Object.call(Phaser.State);
 BootState.prototype.constructor = BootState;

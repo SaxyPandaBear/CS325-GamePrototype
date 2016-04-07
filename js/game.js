@@ -23,6 +23,7 @@ game.state.add('Menu', new MenuState());
 game.state.add('Instructions', new InstructionsState());
 game.state.add('Play', new PlayState());
 game.state.add('End', new EndState());
+game.state.add('GUI', new GUIState());
 
 //start with the boot state
 //start(key, keepCache, keepWorld, paramsForState...) -> using params requires the init() function in the next state
